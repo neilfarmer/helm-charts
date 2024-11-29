@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   issuers:
   - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2024-11-29T23:30:55.911983871Z"
+    description: A Helm chart for Kubernetes
+    digest: b94d537b44eb16d43af008ff80e1d50be7a80520b1806311464b8abb0c8c4231
+    name: issuers
+    type: application
+    urls:
+    - issuers-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 0.1.0
     created: "2024-11-29T23:26:45.900611818Z"
     description: A Helm chart for Kubernetes
@@ -11,4 +21,4 @@ entries:
     urls:
     - issuers-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-29T23:26:45.900618531Z"
+generated: "2024-11-29T23:30:55.912011242Z"
