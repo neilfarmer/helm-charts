@@ -1,0 +1,23 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: {{ .Values.clusterIssuer | quote }}
+spec:
+  acme: 
+    {{- if eq .Values.clusterIssuer "production" }}
+    server: https://acme-v02.api.letsencrypt.org/directory
+    {{- else }}
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    {{- end }}
+    email: {{ .Values.cloudflareEmail | quote }}
+    privateKeySecretRef:
+      name: cluster-issuer-{{ .Values.clusterIssuer }}
+    solvers:
+      - dns01:
+          cloudflare:
+            apiTokenSecretRef:
+              name: cloudflare-token-secret
+              key: cloudflare-token
+        selector:
+          dnsZones:
+            - {{ .Values.cloudflareZone | quote }}

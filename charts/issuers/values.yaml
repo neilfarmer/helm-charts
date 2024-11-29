@@ -1,0 +1,7 @@
+# "production" or "staging". defaults to "staging"
+clusterIssuer: ""
+
+# needs a secret called "cloudflare-token-secret"
+# with a key of "cloudflare-token"
+cloudflareEmail: ""
+cloudflareZone: ""
