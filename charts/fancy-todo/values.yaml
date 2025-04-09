@@ -60,7 +60,7 @@ service:
 
 # This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
 ingress:
-  enabled: false
+  enabled: true
   className: ""
   annotations:
     {}
@@ -125,3 +125,16 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+persistence:
+  enabled: true
+  accessModes:
+    - ReadWriteOnce
+  size: 5Gi
+  storageClass: "" # leave empty to use default or set explicitly
+  mountPath: /data
+  volumeName: fancy-todo-data
+
+env:
+  - name: DATA_DIR
+    value: "/data"
