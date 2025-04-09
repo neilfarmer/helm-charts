@@ -3,6 +3,16 @@ entries:
   fancy-todo:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2025-04-09T01:13:57.89616717Z"
+    description: A Helm chart for Kubernetes
+    digest: 87078bd152f019716f63bd77505f2e75e7997c0c2126b428117a16312cd28510
+    name: fancy-todo
+    type: application
+    urls:
+    - fancy-todo-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2025-04-09T00:28:25.50550279Z"
     description: A Helm chart for Kubernetes
     digest: 5e5b5906ddf786e13bba5f64dc5049c381002acf6cb820c4e3697e24a6419a10
@@ -32,4 +42,4 @@ entries:
     urls:
     - issuers-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-09T00:28:25.505512849Z"
+generated: "2025-04-09T01:13:57.896180034Z"
